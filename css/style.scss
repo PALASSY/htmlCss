@@ -1,0 +1,232 @@
+/*COULEUR DE BASE*/
+@import "setup";
+
+
+
+
+/*GENERALE*/
+//mixin
+@mixin widthHeightBackground($width,$height,$background){
+	width: $width;height: $height;background: $background;
+}
+//varible
+$repeatColor: repeat 0 0 rgba(0, 0, 0, 0.5);
+
+//@each destructuring
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: #403f48;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Mono', monospace;
+	color: green;
+}
+
+.overlay::before {@include widthHeightBackground(100%,100%,url("../images/noise.png") $repeatColor);
+	content: "";top: 0;position: absolute;
+}
+.overlay1::before {
+	background: url("../images/noise1.png") $repeatColor;
+}
+section {margin-top: 3em;}
+a {color: #EC524B;}
+
+/*HEADER*/
+header nav {@include widthHeightBackground(100vw,'',$accent);
+	position: fixed;top: 0;left: 0;z-index: 1;
+}
+header a {color: #f1f1f1;}
+header a:hover {color: red;}
+
+
+/*PRESENTATION*/
+
+#presentation {@include widthHeightBackground('',800px,url('../images/banner1.jpg') no-repeat 0 0 #000);
+	flex-direction: column;background-size: cover;color: #f2f2f2;position: relative;
+.liens a{color: $base;font-size: 1.5em;margin: 1em;}
+h1{font-size: 3em;}
+h1, h2, .liens {z-index: 1;}
+}
+
+@import "animationKeyframes";
+
+
+/*EQUIPE*/
+#equipe {flex-direction: column;}
+.flex {
+	display: flex;
+	flex-direction: column;
+}
+.caroussel {margin: 2% 0;}
+
+.vignette {@include widthHeightBackground(150px,150px,'');
+	border-radius: 50%;padding: 0 1.5%;opacity: 0.5;
+}
+.active {
+	transform: scale(1.2);
+	opacity: 1;
+}
+.icon-titre {@include widthHeightBackground(60px,60px,#31326F);
+	transform: rotate(45deg);display: flex;margin-bottom: 2em;
+}
+.icon-titre .fas{
+	transform: rotate(-45deg);
+	color: #F4F4F2;
+	font-size: 1.4em;
+}
+h3 {color: #31326F;}
+h4 {color: $base;}
+
+/*COMPTEUR*/
+#compteur {@include widthHeightBackground('',250px,url('../images/banner4.jpg') no-repeat 0 0 fixed #000);background-size: cover;color: white;position: relative;
+    h4 {color: $base;font-size: 2.5em;}
+ 	h5 {color: white;text-transform: uppercase;}
+}
+
+/*configuration des icons*/
+.icon-compteur {@include widthHeightBackground(60px,60px,'');transform: rotate(45deg);border: 2px solid #f1f1f1;display: flex;justify-content: center;align-items: center;margin: 0 auto;margin-bottom: 5%;
+}
+
+.icon-compteur .fas {transform: rotate(-45deg);
+}
+
+*
+/*PORTFOLIO*/
+#portfolio figure {
+	flex: 1; /* flex s'applique qu'aux éléménts càd aux enfants*/
+	position: relative;
+    img {width: 280px;}
+}
+
+#portfolio figcaption {@include widthHeightBackground(280px,100%,url("../images/noise.png") repeat 0 0 scroll rgba(0, 0, 0, 0.3));position: absolute;top: 0;color: #f2f2f2;display: flex;flex-direction: column;justify-content: center;align-items: center;opacity: 0;transition: all 2s;transform: scale(0);
+}
+
+#portfolio a:hover figcaption {
+	opacity: 1;
+	transform: scale(1);
+}
+#portfolio .effet-hover {
+	overflow: hidden;
+	width: 280px;
+}
+#portfolio img {
+	transition: all 2s;
+}
+#portfolio a:hover img {
+	transform: rotate(10deg) scale(2);
+}
+
+/*PROGRESSE BARRES*/
+//Importation du fichier "animationBarreProgress"
+@import "animationBarreProgress";
+
+
+
+/*ACTUALITE*/
+#actualite {
+	background: #F4F4F2;
+}
+#actualite article {
+	background: #FFFFFC;
+	border-top: 3px solid #EC524B;
+	padding: 3%;
+	margin:{top: 20%;bottom: 10%;}
+	padding-top: 15%;
+	position: relative;
+}
+#actualite article h4 {
+	text-align: center;
+	font-size: 1.3em;
+}
+#actualite article a {
+	font-size: 0.54em;
+}
+#actualite article span {
+	font-size: 0.7em;
+}
+#actualite article p {
+	font-size: 0.8em;
+}
+#actualite article span {
+	font-size: 0.6em;
+}
+#actualite article .icon-titre {@include widthHeightBackground(30px,30px,#EC524B);
+	position: absolute;top: -28.8%;left: 47%;
+}
+#actualite .icon-titre {
+		margin-top: 3em;
+}
+#actualite figure {
+	margin-bottom: -2.5em;
+}
+
+
+/*MAP*/
+#map {
+	flex-direction: column;
+}
+.bandeau {
+	background: #EC524B;
+	color: #FFFFFC;
+	font-size: 1.7em;
+	text-transform: uppercase;
+	padding: 1.5em;
+}
+
+
+/*CONTACT*/
+#contact, #contact .input {
+	flex-direction: column;
+	h3{color:red;}
+}
+#contact input, #contact textarea {
+    margin-bottom: 1.5em;
+    width: 60%
+}
+
+/*FOOTER*/
+//variable
+$white: white;
+$black: black;
+$yellow: #FFE05D;
+
+#footer {
+	flex-direction: column;
+	background: $accent;
+	border-top: 3px solid $yellow; 
+}
+#footer .icons {
+	width: 100%;
+	margin-top: 1em;
+}
+#footer h6{@include widthHeightBackground(110px,30px,$yellow);
+	text-align: center;
+	line-height: 30px;
+	color: #EC524B;
+}
+#footer .icon-titre {@include widthHeightBackground(1.5em,1.5em,$black);
+	margin-left: 1%; 
+	border: 1px solid $white;
+}
+#footer i {
+	color: $white;
+	transform: rotate(-45deg);
+}
+#footer  p{
+	color: white;
+	font-size: 0.7em;
+}
+#footer .icon-titre:hover { 
+	background: $white;
+	border: 1px solid $black;
+}
+#footer .fab:hover {
+	color: $black;
+	
+}
+
+
+/*RESPONSIVE*/
+//Importation du fichier "_setup.scss"
+@import "responsive";

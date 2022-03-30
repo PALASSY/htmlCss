@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport content=">
+	<title>WEB DEV | interface</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<!--Link cdn Bootsrap before style CSS-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!--Fontawesome icons-->
+	<script src="https://kit.fontawesome.com/bb0dbb8b96.js" crossorigin="anonymous"></script>
+
+	<!-- Link CSS (style perso)--->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--Google Fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,200&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<main class="container-fluid">
+
+		<header class="row">
+			<nav class="navbar navbar-expand-xl navbar-dark bg-header fixed-top">
+				<img src="images/logo.png" alt="logo" id="img">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+  				</button>
+  				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+						    <a class="nav-link active" href="#">Accueil<span class="sr-only">(current)</span></a>
+						</li>
+					    <li class="nav-item">
+						    <a class="nav-link" href="#">Mes cours</a>
+						</li>
+						<li class="nav-item dropdown">
+        					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Programmation</a>
+        					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					          <a class="dropdown-item" href="#">Action</a>
+					          <a class="dropdown-item" href="#">Another action</a>
+					          <div class="dropdown-divider"></div>
+					          <a class="dropdown-item" href="#">Something else here</a>
+					        </div>
+						</li>
+						<li class="nav-item">
+						    <a class="nav-link" href="#">Objectif</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<section id="presentation" class="row align-items-center justify-content-center overlay overlay1">
+			<h1>Développeur Web</h1>
+			<div class="animation">
+				<div class="msg">
+					<h1><i class="far fa-edit"></i> Développement des interfaces web dynamique</h1>
+				</div>
+				<div class="msg">
+					<h1><i class="fas fa-file-code"></i> Maîtrise des principaux langages JS/PHP/SASS/MySQL/NoSQL</h1>
+				</div>
+				<div class="msg">
+					<h1><i class="fas fa-laptop-code"></i> S'adapte rapidement aux évolutions de l'environement de web</h1>
+				</div>
+				<div class="msg">
+					<h1><i class="fas fa-laptop-code"></i> Utilise le CMS pour gain du temps</h1>
+				</div>
+				<div class="msg">
+					<h1><i class="fas fa-exclamation-circle"></i> Analyse les besoins réels et les solutions techniques adaptées</h1>
+				</div>
+			</div>
+			<div class="liens">
+				<a href="#">Plus de détails</a>
+				<a href="#">Voir portfolio</a>
+			</div>
+		</section>
+
+		<section id="equipe" class="row">
+			<div class=" flex col-md-8 offset-md-2 align-items-center">
+				<div class="icon-titre justify-content-center align-items-center">
+					<i class="fas fa-users fa-2x"></i>
+				</div>
+				 <h3>Notre équipe de</h3>
+				 <h4>Web designers</h4>
+				 <div class="caroussel">
+					 <img src="images/me2.jpg" alt="" title="" class="vignette">
+					 <img src="images/me.jpg" alt="" title="" class="vignette active">
+					 <img src="images/me3.jpg" alt="" title="" class="vignette">
+				 </div>
+				 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet,adipiscing nec, ultricies sed, dolor elit.Sed non risus. Suspendisse lectus tortor,dignissim sit amet, adipiscing nec,ultricies sed,dolor.</p>
+				 <div class="liens">
+					<a href="#">Téléchargez</a>
+					<a href="#">Contactez-nous</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="compteur" class="row align-items-center overlay">
+			<div class="col-md-2 offset-md-2 text-center">
+				<div class="icon-compteur">
+					<i class="fas fa-clock fa-2x"></i>
+				</div>
+				<h4>1500</h4>
+				<h5>Heures de Travail</h5>
+			</div>
+			<div class="col-md-2 text-center">
+				<div class="icon-compteur">
+					<i class="fas fa-mug-hot fa-2x"></i>
+				</div>
+				<h4>45</h4>
+				<h5>Tasses de Café</h5>
+			</div>
+			<div class="col-md-2 text-center">
+				<div class="icon-compteur">
+					<i class="fas fa-rocket fa-2x"></i>
+				</div>
+				<h4>178</h4>
+				<h5>Projets Réalisés</h5>
+			</div>
+			<div class="col-md-2 text-center">
+				<div class="icon-compteur fa-2x">
+					<i class="fas fa-user-alt"></i>
+				</div>
+				<h4>32</h4>
+				<h5>Clients Satisfaits</h5>
+			</div>
+		</section>	
+
+		<section id="portfolio" class="row">
+			<div class=" flex col-md-8 offset-md-2 align-items-center">
+				<div class="icon-titre justify-content-center align-items-center">
+					<i class="fas fa-pencil-alt fa-2x"></i>
+				</div>
+				<h3>Portfolio</h3>
+				<h4>Lorem Ipsum Dolor</h4>
+				<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed non risus.Suspendisse lectus tortor, dignissim sit amet</p>
+				<div class="row">
+					<figure>
+						<a href="#">
+							<div class="effet-hover">
+								<img src="images/work1.jpg" alt="" titre="">
+							</div>
+							<figcaption>
+								<h5>Titre de description</h5>
+								<p>Description ou accroche commerciale</p>
+							</figcaption>
+						</a>
+					</figure>
+					<figure>
+						<a href="#">
+							<div class="effet-hover">
+								<img src="images/work2.jpg" alt="" titre="">
+							</div>
+							<figcaption>
+								<h5>Titre de description</h5>
+								<p>Description ou accroche commerciale</p>
+							</figcaption>
+						</a>
+					</figure>
+					<figure>
+						<a href="#">
+							<div class="effet-hover">
+								<img src="images/work3.jpg" alt="" titre="">
+							</div>
+							<figcaption>
+								<h5>Titre de description</h5>
+								<p>Description ou accroche commerciale</p>
+							</figcaption>
+						</a>
+					</figure>
+					<figure>
+						<a href="#">
+							<div class="effet-hover">
+								<img src="images/work4.jpg" alt="" titre="">
+							</div>
+							<figcaption>
+								<h5>Titre de description</h5>
+								<p>Description ou accroche commerciale</p>
+							</figcaption>
+						</a>
+					</figure>
+					<figure>
+						<a href="#">
+							<div class="effet-hover">
+								<img src="images/work5.jpg" alt="" titre="">
+							</div>
+							<figcaption>
+								<h5>Titre de description</h5>
+								<p>Description ou accroche commerciale</p>
+							</figcaption>
+						</a>
+					</figure>
+					<figure>
+						<a href="#">
+							<div class="effet-hover">
+								<img src="images/work6.jpg" alt="" titre="">
+							</div>
+							<figcaption>
+								<h5>Titre de description</h5>
+								<p>Description ou accroche commerciale</p>
+							</figcaption>
+						</a>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section id="temoignage" class="row"></section>
+
+		<section id="competence" class="row">
+			<div class=" row col-md-8 offset-md-2">
+				<div class="col-md-6">
+					<h4>Titre</h4>
+					<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed non risus.Suspendisse lectus tortor, dignissim sit amet</p>
+				</div>
+				<div class="col-md-6">
+					<h5>Compétence</h5>
+					<div class="progresse"> <!--Barre 1-->
+						<div class="progresse-bar">
+							<span class="span-barre">Référencement</span>
+						</div>
+					</div>
+					<div class="progresse"> <!--Barre 2-->
+						<div class="progresse-bar barre2">
+							<span class="span-barre">Infographie</span>
+						</div>
+					</div>
+					<div class="progresse"> <!--Barre 3-->
+						<div class="progresse-bar barre3">
+							<span class="span-barre">HTML/CSS</span>
+						</div>
+					</div>
+					<div class="progresse"> <!--Barre 4-->
+						<div class="progresse-bar barre4">
+							<span class="span-barre">JAVASCRIPT</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="actualite" class="row">
+			<div class="flex col-md-8 offset-md-2 align-items-center">
+				<div class=" icon-titre justify-content-center align-items-center">
+					<i class="fas fa-newspaper fa-2x"></i>
+				</div>
+				<h3>Nos actualités</h3>
+				<h4>Restez informés</h4>
+				<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed non risus.Suspendisse lectus tortor, dignissim sit amet</p>
+				<div class="row justify-content-between">
+					<div class="col-md-3">
+						<article>  <!--article 1 colonne 1-->
+							<div class="icon-titre row justify-content-center align-items-center">
+								<i class="fas fa-pencil-alt"></i>
+							</div>
+							<h4>Lorem Ipsum</h4>
+							<a href=""><i class="fas fa-calendar-times"></i> Administrateur</a>
+							<a href=""><i class="fas fa-air-freshener"></i> Catégorie</a>
+							<a href=""><i class="fas fa-angle-double-right"></i> Commentaire</a>
+							<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed non risus.Suspendisse lectus tortor, dignissim sit amet</p>
+							<hr>
+							<span>07 novembre 2020</span>
+						</article>
+						<figure>
+							<img src="images/news1.jpg" class="img-fluid">
+						</figure>
+						<article>  <!--article 2 colonne 1-->
+							<div class="icon-titre row justify-content-center align-items-center">
+								<i class="fas fa-pencil-alt"></i>
+							</div>
+							<h4>Lorem Ipsum</h4>
+							<a href=""><i class="fas fa-calendar-times"></i> Administrateur</a>
+							<a href=""><i class="fas fa-air-freshener"></i> Catégorie</a>
+							<a href=""><i class="fas fa-angle-double-right"></i> Commentaire</a>
+							<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed non risus.Suspendisse lectus tortor, dignissim sit amet</p>
+							<hr>
+							<span>07 novembre 2020</span>
+						</article>
+					</div>
+					<div class="col-md-3">
+						<figure>
+							<img src="images/news2.jpg" class="img-fluid">
+						</figure>
+						<article>  <!--article 1 colonne 2-->
+							<div class="icon-titre row justify-content-center align-items-center">
+								<i class="fas fa-pencil-alt"></i>
+							</div>
+							<h4>Lorem Ipsum</h4>
+							<a href=""><i class="fas fa-calendar-times"></i> Administrateur</a>
+							<a href=""><i class="fas fa-air-freshener"></i> Catégorie</a>
+							<a href=""><i class="fas fa-angle-double-right"></i> Commentaire</a>
+							<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed non risus.Suspendisse lectus tortor, dignissim sit amet</p>
+							<hr>
+							<span>07 novembre 2020</span>
+						</article>
+						<article>  <!--article 2 colonne 2-->
+							<div class="icon-titre row justify-content-center align-items-center">
+								<i class="fas fa-pencil-alt"></i>
+							</div>
+							<h4>Lorem Ipsum</h4>
+							<a href=""><i class="fas fa-calendar-times"></i> Administrateur</a>
+							<a href=""><i class="fas fa-air-freshener"></i> Catégorie</a>
+							<a href=""><i class="fas fa-angle-double-right"></i> Commentaire</a>
+							<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed non risus.Suspendisse lectus tortor, dignissim sit amet</p>
+							<hr>
+							<span>07 novembre 2020</span>
+						</article>
+					</div>
+					<div class="col-md-3">
+						<article>  <!--article 1 colonne 3-->
+							<div class="icon-titre row justify-content-center align-items-center">
+								<i class="fas fa-pencil-alt"></i>
+							</div>
+							<h4>Lorem Ipsum</h4>
+							<a href=""><i class="fas fa-calendar-times"></i> Administrateur</a>
+							<a href=""><i class="fas fa-air-freshener"></i> Catégorie</a>
+							<a href=""><i class="fas fa-angle-double-right"></i> Commentaire</a>
+							<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed non risus.Suspendisse lectus tortor, dignissim sit amet</p>
+							<hr>
+							<span>07 novembre 2020</span>
+						</article>
+						<article>  <!--article 2 colonne 3-->
+							<div class="icon-titre row justify-content-center align-items-center">
+								<i class="fas fa-pencil-alt"></i>
+							</div>
+							<h4>Lorem Ipsum</h4>
+							<a href=""><i class="fas fa-calendar-times"></i> Administrateur</a>
+							<a href=""><i class="fas fa-air-freshener"></i> Catégorie</a>
+							<a href=""><i class="fas fa-angle-double-right"></i> Commentaire</a>
+							<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed non risus.Suspendisse lectus tortor, dignissim sit amet</p>
+							<hr>
+							<span>07 novembre 2020</span>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="map" class="row">
+			<div class="bandeau text-center">
+				<h6>Visite sur rendez-vous</h6>
+			</div>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.759637363168!2d-0.5582868850746417!3d44.82646118379082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd552648d40fc247%3A0x2bc94166a0a4eed6!2sGare%20de%20Bordeaux%20Saint-Jean!5e0!3m2!1sfr!2sfr!4v1604816928885!5m2!1sfr!2sfr" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</section>
+
+		<section id="contact" class="row">
+			<div class=" flex col-md-8 offset-md-2 align-items-center">
+				<div class="icon-titre justify-content-center align-items-center">
+					<i class="fas fa-newspaper fa-2x"></i>
+				</div>
+				<h3>Restez en contact</h3>
+				<h4>Avec notre agence</h4>
+				<p>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed non risus.Suspendisse lectus tortor, dignissim sit amet</p>
+			</div>
+			<form action="#" method="post">
+				<div class="row input col-md-8 offset-md-2 align-items-center">
+					<input type="text" name="nom" placeholder="Votre nom">
+					<input type="email" name="email" placeholder="Votre email">
+					<textarea name="message" placeholder="Votre message" rows="5"></textarea>
+					<input type="submit" value="Envoyer" class="btn btn-primary">
+				</div>
+			</form>
+		</section>
+
+		<section id="footer" class="row align-items-center">
+			<h6>Suivez-nous</h6>
+			<div class="row icons justify-content-center">
+				<div class="icon-titre justify-content-center align-items-center">
+					<i class="fab fa-facebook-f"></i>
+				</div>
+				<div class="icon-titre justify-content-center align-items-center">
+					<i class="fab fa-twitter"></i>
+				</div>
+				<div class="icon-titre justify-content-center align-items-center">
+					<i class="fab fa-google-plus-g"></i>
+				</div>
+				<div class="icon-titre justify-content-center align-items-center">
+					<i class="fab fa-linkedin-in"></i>
+				</div>
+				<div class="icon-titre justify-content-center align-items-center">
+					<i class="fab fa-pinterest-p"></i>
+				</div>		
+			</div>
+			<div>
+				<p>&copy; Design by Nelly PALASSY 2020 Tous droits réservés</p>
+			</div>
+		</section>
+
+	</main>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	
+</body>
+</html>

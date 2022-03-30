@@ -1,0 +1,113 @@
+//Variables 
+$widthEnPixel: 35px;
+$transitionDurationTiming: 3s linear 1;
+$startKeyframesWidthValue: 0%;
+$startKeyframesLeftValue: 0%;
+$widthProgresse-bar: 70%;
+$widthProgresse2: 35%;
+$widthProgresse3: 85%;
+$widthProgresse4: 57%;
+//Nesting
+
+
+//@extend
+
+
+//placeholder
+
+
+//@mixin  => parce que les paramètres sont identiques seulement les valeurs changent
+//progresse bar*//* les barres*/
+@mixin widthHeightBackgroundcolor($width,$height,$backgroundColor){
+	width: $width;height: $height;background-color: $backgroundColor;
+}
+//les barres
+@mixin widthBackgroundAnimation($widthEnPercent,$background,$animation){
+	width:$widthEnPercent;background: $background;animation: $animation;
+}
+@mixin borderleftcolorAnimationLeft($borderLeftcolor,$animationBarres,$colorBarres){
+	border-left-color: $borderLeftcolor;animation: $animationBarres;left: $colorBarres;
+}
+@mixin startAndLastKayframesWidth($startKeyframesWidth,$lastKeyframesWidth){
+	0%{width: $startKeyframesWidth;}
+	100%{width: $lastKeyframesWidth;} /*même longueur que .progresse-bar la référence*/
+} 
+@mixin startAndELastKayframesLeft($startKeyframesLeft,$lastKeyframesLeft){
+	0%{left:$startKeyframesLeft;}
+	100%{left:$lastKeyframesLeft;}
+}
+//&
+
+
+/*COMPETENCES*/
+/*progresse bar*/
+.progresse {@include widthHeightBackgroundcolor(100%,$widthEnPixel,grey);
+	position: relative;
+	margin-bottom: 2%;
+}
+/* les barres*/
+.progresse-bar {@include widthHeightBackgroundcolor($widthProgresse-bar,$widthEnPixel,yellow);
+	animation: barre-animee 3s linear 1;
+	display: flex;
+	align-items: center;
+	padding: 1%;
+}
+.barre2 {@include widthBackgroundAnimation($widthProgresse2,green,barre-animee-deuxieme $transitionDurationTiming);
+}
+
+.barre3 {@include widthBackgroundAnimation($widthProgresse3,red,barre-animee-troisieme $transitionDurationTiming);
+}
+
+.barre4 {@include widthBackgroundAnimation($widthProgresse4,pink,barre-animee-quatrieme $transitionDurationTiming);
+}
+
+/* les barres::after càd les flèches*/
+.progresse-bar::after {
+	content: "";
+	//Nesting pour imbriquer les mêmes noms de propriété  
+	border:{left: 15px solid yellow;bottom: 15px solid transparent;top: 20px solid transparent;}
+	position: absolute;
+	top: 0;
+	animation: fleche-animee $transitionDurationTiming;
+	left: $widthProgresse-bar;
+}
+.barre2::after {@include borderleftcolorAnimationLeft(green,fleche-animee-deuxieme $transitionDurationTiming,$widthProgresse2);
+}
+
+.barre3::after {@include borderleftcolorAnimationLeft(red,fleche-animee-troisieme $transitionDurationTiming,$widthProgresse3);
+}
+
+.barre4::after {@include borderleftcolorAnimationLeft(pink,fleche-animee-quatrieme $transitionDurationTiming,$widthProgresse4);
+}
+
+/* les keyframe's barres*/
+/*barre1*/
+@keyframes barre-animee {@include startAndLastKayframesWidth($startKeyframesWidthValue,$widthProgresse-bar);}
+
+@keyframes fleche-animee {@include startAndELastKayframesLeft($startKeyframesLeftValue,$widthProgresse-bar);
+}
+/*barre2*/
+@keyframes barre-animee-deuxieme {@include startAndLastKayframesWidth($startKeyframesWidthValue,$widthProgresse2);
+}
+@keyframes fleche-animee-deuxieme {@include startAndELastKayframesLeft($startKeyframesLeftValue,$widthProgresse2);
+}
+/*barre3*/
+@keyframes barre-animee-troisieme {@include startAndLastKayframesWidth($startKeyframesWidthValue,$widthProgresse3);
+}
+@keyframes fleche-animee-troisieme {@include startAndELastKayframesLeft($startKeyframesLeftValue,$widthProgresse3);
+}
+/*barre4*/
+@keyframes barre-animee-quatrieme {@include startAndLastKayframesWidth($startKeyframesWidthValue,$widthProgresse4);
+}
+@keyframes fleche-animee-quatrieme {@include startAndELastKayframesLeft($startKeyframesLeftValue,$widthProgresse4);
+}
+/*span-barre*/
+.span-barre {
+	text-transform: uppercase;
+	opacity: 1;
+	animation: span-barre 3s linear 1;
+}
+@keyframes span-barre {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}

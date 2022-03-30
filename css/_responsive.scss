@@ -1,0 +1,14 @@
+@media screen and (max-width:600px){
+	.vignette{width:7rem;height:7rem;}
+} 
+
+.vignette.active{width:10rem;height:10rem;}
+
+h3{font-size: 2.5em;}
+
+
+
+@media screen and (min-width:320px) and (max-width:600px){
+	.nav{flex-direction: column;}
+	h3{font-size: 2em;}
+}

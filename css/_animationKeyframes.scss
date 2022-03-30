@@ -1,0 +1,79 @@
+//Nombre & durée d'un et des messages
+//Nombre d'éléménts à animer: 5
+$nombre-element: 5;
+
+//Durée de l'apparition et disparition des éléments: 3s 
+$duree-element: 3;
+
+//Durée fade-in et fade-out: 1s 
+$duree-fade: 1;
+
+//Durée totale de fade: 4s
+$duree-totalFade: $duree-element + $duree-fade;
+
+//Durée totale d'animation: 20s
+$duree-totaleAnimation: $nombre-element * $duree-totalFade;
+
+
+//Calcul pour obtenir le pourcetage de keyframes
+//Cent-pour-cent / le nombre des éléménts: 100%/5=20%
+$vingt-pourcent: 100% / $nombre-element;
+
+//Cent-pour-cent * (la durée fade-in et fade-out / la durée totale d'animation): 100%*(1/20)=5% 
+$cinq-pourcent: 100% * ($duree-fade / $duree-totaleAnimation);
+
+//Additionner les 2 résultats précédente: 20%+5%=25%
+$vigntcinq-pourcent: $vingt-pourcent + $cinq-pourcent;
+
+//Gestion des préfixes des navigateurs 
+$prefixes-navigateur: "-webkit-", "-moz-", "-ms-", "-o-", "";
+
+//Affichage des pourcentages de keyframes en  mode @mixin
+@mixin opacity{
+	0%{opacity: 0;}
+	#{$cinq-pourcent},#{$vingt-pourcent}{opacity: 1;}
+	#{$vigntcinq-pourcent},100%{opacity: 0;}
+}
+@-webkit-keyframes monAnimation{@include opacity}
+@-moz-keyframes monAnimation{@include opacity}
+@-ms-keyframes monAnimation{@include opacity}
+@-o-keyframes monAnimation{@include opacity}
+@keyframes monAnimation{@include opacity}
+
+
+
+.animation{
+	background-color: $accent;
+	color: $base;
+	width: 100%;
+	height: 65px;
+	padding: 0.6em;
+	padding-left: 2em;
+	overflow: hidden;
+	margin-bottom: 2em;
+	opacity: 0.6;
+	position: relative;
+	border:none;
+	.msg{width: 100%;position: absolute;top: 0;background-color: $accent;color: $base;
+		//animation de tous les .msg (PS: interpoler la durée-total d'animation pour pouvoir rajouter le signe second=>(s))
+		@each $prefixe in $prefixes-navigateur{
+			#{$prefixe}animation: monAnimation #{$duree-totaleAnimation}s infinite;
+			#{$prefixe}transition-timing-function: ease-out;
+			}
+		//Optimisation avec @for(boucle) le  délai de tous les .msg
+		//Faire une boucle par rapport au nombre de .msg: 5
+	    //Préciser que l'itération commence par 1
+		@for $i from 1 through $nombre-element{
+			//Interpolation du rang de l'enfant.msg ainsi le délai en seconde
+			&:nth-of-type(#{$i}){
+				@each $prefixe in $prefixes-navigateur{
+					#{$prefixe}animation-delay: #{($i - 1) * $duree-totalFade}s;}
+				}
+		}
+	}
+	.msg h1{font-size: 2px;color: white;text-align: center;}
+}
+
+
+
+

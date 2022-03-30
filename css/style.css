@@ -1,0 +1,747 @@
+@charset "UTF-8";
+/*COULEUR DE BASE*/
+/*GENERALE*/
+/* line 17, style.scss */
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #403f48;
+}
+
+/* line 21, style.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Mono", monospace;
+  color: green;
+}
+
+/* line 26, style.scss */
+.overlay::before {
+  width: 100%;
+  height: 100%;
+  background: url("../images/noise.png") repeat 0 0 rgba(0, 0, 0, 0.5);
+  content: "";
+  top: 0;
+  position: absolute;
+}
+
+/* line 29, style.scss */
+.overlay1::before {
+  background: url("../images/noise1.png") repeat 0 0 rgba(0, 0, 0, 0.5);
+}
+
+/* line 32, style.scss */
+section {
+  margin-top: 3em;
+}
+
+/* line 33, style.scss */
+a {
+  color: #ec524b;
+}
+
+/*HEADER*/
+/* line 36, style.scss */
+header nav {
+  width: 100vw;
+  height: "";
+  background: #1c2b2d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#img {
+  margin: 0 2em;
+}
+
+/* line 39, style.scss */
+header a {
+  color: #f1f1f1;
+}
+
+/* line 40, style.scss */
+header a:hover {
+  color: red;
+}
+
+/*PRESENTATION*/
+/* line 45, style.scss */
+#presentation {
+  width: "";
+  height: 800px;
+  background: url("../images/banner1.jpg") no-repeat 0 0 #000;
+  flex-direction: column;
+  background-size: cover;
+  color: #f2f2f2;
+  position: relative;
+}
+/* line 47, style.scss */
+#presentation .liens a {
+  color: #ce6262;
+  font-size: 1.5em;
+  margin: 1em;
+}
+/* line 48, style.scss */
+#presentation h1 {
+  font-size: 3em;
+}
+/* line 49, style.scss */
+#presentation h1,
+#presentation h2,
+#presentation .liens {
+  z-index: 1;
+}
+
+@-webkit-keyframes monAnimation {
+  0% {
+    opacity: 0;
+  }
+  5%,
+  20% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes monAnimation {
+  0% {
+    opacity: 0;
+  }
+  5%,
+  20% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes monAnimation {
+  0% {
+    opacity: 0;
+  }
+  5%,
+  20% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes monAnimation {
+  0% {
+    opacity: 0;
+  }
+  5%,
+  20% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes monAnimation {
+  0% {
+    opacity: 0;
+  }
+  5%,
+  20% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+/* line 45, _animationKeyframes.scss */
+.animation {
+  background-color: #1c2b2d;
+  color: #ce6262;
+  width: 100%;
+  height: 65px;
+  padding: 0.6em;
+  padding-left: 2em;
+  overflow: hidden;
+  margin-bottom: 2em;
+  opacity: 0.6;
+  position: relative;
+  border: none;
+}
+/* line 57, _animationKeyframes.scss */
+.animation .msg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #1c2b2d;
+  color: #ce6262;
+  -webkit-animation: monAnimation 20s infinite;
+  -webkit-transition-timing-function: ease-out;
+  -moz-animation: monAnimation 20s infinite;
+  -moz-transition-timing-function: ease-out;
+  -ms-animation: monAnimation 20s infinite;
+  -ms-transition-timing-function: ease-out;
+  -o-animation: monAnimation 20s infinite;
+  -o-transition-timing-function: ease-out;
+  animation: monAnimation 20s infinite;
+  transition-timing-function: ease-out;
+}
+/* line 68, _animationKeyframes.scss */
+.animation .msg:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+}
+/* line 68, _animationKeyframes.scss */
+.animation .msg:nth-of-type(2) {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -ms-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s;
+}
+/* line 68, _animationKeyframes.scss */
+.animation .msg:nth-of-type(3) {
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+  -ms-animation-delay: 8s;
+  -o-animation-delay: 8s;
+  animation-delay: 8s;
+}
+/* line 68, _animationKeyframes.scss */
+.animation .msg:nth-of-type(4) {
+  -webkit-animation-delay: 12s;
+  -moz-animation-delay: 12s;
+  -ms-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s;
+}
+/* line 68, _animationKeyframes.scss */
+.animation .msg:nth-of-type(5) {
+  -webkit-animation-delay: 16s;
+  -moz-animation-delay: 16s;
+  -ms-animation-delay: 16s;
+  -o-animation-delay: 16s;
+  animation-delay: 16s;
+}
+/* line 74, _animationKeyframes.scss */
+.animation .msg h1 {
+  font-size: 2px;
+  color: white;
+  text-align: center;
+}
+
+/*EQUIPE*/
+/* line 56, style.scss */
+#equipe {
+  flex-direction: column;
+}
+
+/* line 57, style.scss */
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 61, style.scss */
+.caroussel {
+  margin: 2% 0;
+}
+
+/* line 63, style.scss */
+.vignette {
+  width: 150px;
+  height: 150px;
+  background: "";
+  border-radius: 50%;
+  padding: 0 1.5%;
+  opacity: 0.5;
+}
+
+/* line 66, style.scss */
+.active {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* line 70, style.scss */
+
+/* line 73, style.scss */
+.icon-titre {
+  width: 60px;
+  height: 60px;
+  background: #31326f;
+  transform: rotate(45deg);
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.icon-titre .fas {
+  transform: rotate(-45deg);
+  color: #f4f4f2;
+  font-size: 1.4em;
+}
+
+/* line 78, style.scss */
+h3 {
+  color: #31326f;
+}
+
+/* line 79, style.scss */
+h4 {
+  color: #ce6262;
+}
+
+/*COMPTEUR*/
+/* line 82, style.scss */
+#compteur {
+  width: "";
+  height: 250px;
+  background: url("../images/banner4.jpg") no-repeat 0 0 fixed #000;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+/* line 83, style.scss */
+#compteur h4 {
+  color: #ce6262;
+  font-size: 2.5em;
+}
+/* line 84, style.scss */
+#compteur h5 {
+  color: white;
+  text-transform: uppercase;
+}
+
+/*configuration des icons*/
+/* line 88, style.scss */
+.icon-compteur {
+  width: 60px;
+  height: 60px;
+  background: "";
+  transform: rotate(45deg);
+  border: 2px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+/* line 91, style.scss */
+.icon-compteur .fas {
+  transform: rotate(-45deg);
+}
+
+/* line 94, style.scss */
+* #portfolio figure {
+  flex: 1;
+  /* flex s'applique qu'aux éléménts càd aux enfants*/
+  position: relative;
+}
+/* line 99, style.scss */
+* #portfolio figure img {
+  width: 280px;
+}
+
+/* line 102, style.scss */
+#portfolio figcaption {
+  width: 280px;
+  height: 100%;
+  background: url("../images/noise.png") repeat 0 0 scroll rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 2s;
+  transform: scale(0);
+}
+
+/* line 105, style.scss */
+#portfolio a:hover figcaption {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* line 109, style.scss */
+#portfolio .effet-hover {
+  overflow: hidden;
+  width: 280px;
+}
+
+/* line 113, style.scss */
+#portfolio img {
+  transition: all 2s;
+}
+
+/* line 116, style.scss */
+#portfolio a:hover img {
+  transform: rotate(10deg) scale(2);
+}
+
+/*PROGRESSE BARRES*/
+/*COMPETENCES*/
+/*progresse bar*/
+/* line 44, _animationBarreProgress.scss */
+.progresse {
+  width: 100%;
+  height: 35px;
+  background-color: grey;
+  position: relative;
+  margin-bottom: 2%;
+}
+
+/* les barres*/
+/* line 49, _animationBarreProgress.scss */
+.progresse-bar {
+  width: 70%;
+  height: 35px;
+  background-color: yellow;
+  animation: barre-animee 3s linear 1;
+  display: flex;
+  align-items: center;
+  padding: 1%;
+}
+
+/* line 55, _animationBarreProgress.scss */
+.barre2 {
+  width: 35%;
+  background: green;
+  animation: barre-animee-deuxieme 3s linear 1;
+}
+
+/* line 58, _animationBarreProgress.scss */
+.barre3 {
+  width: 85%;
+  background: red;
+  animation: barre-animee-troisieme 3s linear 1;
+}
+
+/* line 61, _animationBarreProgress.scss */
+.barre4 {
+  width: 57%;
+  background: pink;
+  animation: barre-animee-quatrieme 3s linear 1;
+}
+
+/* les barres::after càd les flèches*/
+/* line 65, _animationBarreProgress.scss */
+.progresse-bar::after {
+  content: "";
+  border-left: 15px solid yellow;
+  border-bottom: 15px solid transparent;
+  border-top: 20px solid transparent;
+  position: absolute;
+  top: 0;
+  animation: fleche-animee 3s linear 1;
+  left: 70%;
+}
+
+/* line 74, _animationBarreProgress.scss */
+.barre2::after {
+  border-left-color: green;
+  animation: fleche-animee-deuxieme 3s linear 1;
+  left: 35%;
+}
+
+/* line 77, _animationBarreProgress.scss */
+.barre3::after {
+  border-left-color: red;
+  animation: fleche-animee-troisieme 3s linear 1;
+  left: 85%;
+}
+
+/* line 80, _animationBarreProgress.scss */
+.barre4::after {
+  border-left-color: pink;
+  animation: fleche-animee-quatrieme 3s linear 1;
+  left: 57%;
+}
+
+/* les keyframe's barres*/
+/*barre1*/
+@keyframes barre-animee {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+  /*même longueur que .progresse-bar la référence*/
+}
+@keyframes fleche-animee {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 70%;
+  }
+}
+/*barre2*/
+@keyframes barre-animee-deuxieme {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
+  /*même longueur que .progresse-bar la référence*/
+}
+@keyframes fleche-animee-deuxieme {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 35%;
+  }
+}
+/*barre3*/
+@keyframes barre-animee-troisieme {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+  /*même longueur que .progresse-bar la référence*/
+}
+@keyframes fleche-animee-troisieme {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 85%;
+  }
+}
+/*barre4*/
+@keyframes barre-animee-quatrieme {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 57%;
+  }
+  /*même longueur que .progresse-bar la référence*/
+}
+@keyframes fleche-animee-quatrieme {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 57%;
+  }
+}
+/*span-barre*/
+/* line 105, _animationBarreProgress.scss */
+.span-barre {
+  text-transform: uppercase;
+  opacity: 1;
+  animation: span-barre 3s linear 1;
+}
+
+@keyframes span-barre {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*ACTUALITE*/
+/* line 127, style.scss */
+#actualite {
+  background: #f4f4f2;
+}
+
+/* line 130, style.scss */
+#actualite article {
+  background: #fffffc;
+  border-top: 3px solid #ec524b;
+  padding: 3%;
+  margin-top: 20%;
+  margin-bottom: 10%;
+  padding-top: 15%;
+  position: relative;
+}
+
+/* line 138, style.scss */
+#actualite article h4 {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+/* line 142, style.scss */
+#actualite article a {
+  font-size: 0.54em;
+}
+
+/* line 145, style.scss */
+#actualite article span {
+  font-size: 0.7em;
+}
+
+/* line 148, style.scss */
+#actualite article p {
+  font-size: 0.8em;
+}
+
+/* line 151, style.scss */
+#actualite article span {
+  font-size: 0.6em;
+}
+
+/* line 154, style.scss */
+#actualite article .icon-titre {
+  width: 30px;
+  height: 30px;
+  background: #ec524b;
+  position: absolute;
+  top: -28.8%;
+  left: 47%;
+}
+
+/* line 157, style.scss */
+#actualite .icon-titre {
+  margin-top: 3em;
+}
+
+/* line 160, style.scss */
+#actualite figure {
+  margin-bottom: -2.5em;
+}
+
+/*MAP*/
+/* line 166, style.scss */
+#map {
+  flex-direction: column;
+}
+
+/* line 169, style.scss */
+.bandeau {
+  background: #ec524b;
+  color: #fffffc;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  padding: 1.5em;
+}
+
+/*CONTACT*/
+/* line 179, style.scss */
+#contact,
+#contact .input {
+  flex-direction: column;
+}
+/* line 181, style.scss */
+#contact h3,
+#contact .input h3 {
+  color: red;
+}
+
+/* line 183, style.scss */
+#contact input,
+#contact textarea {
+  margin-bottom: 1.5em;
+  width: 60%;
+}
+
+/*FOOTER*/
+/* line 194, style.scss */
+#footer {
+  flex-direction: column;
+  background: #1c2b2d;
+  border-top: 3px solid #ffe05d;
+}
+
+/* line 199, style.scss */
+#footer .icons {
+  width: 100%;
+  margin-top: 1em;
+}
+
+/* line 203, style.scss */
+#footer h6 {
+  width: 110px;
+  height: 30px;
+  background: #ffe05d;
+  text-align: center;
+  line-height: 30px;
+  color: #ec524b;
+}
+
+/* line 208, style.scss */
+#footer .icon-titre {
+  width: 1.5em;
+  height: 1.5em;
+  background: black;
+  margin-left: 1%;
+  border: 1px solid white;
+}
+
+/* line 212, style.scss */
+#footer i {
+  color: white;
+  transform: rotate(-45deg);
+}
+
+/* line 216, style.scss */
+#footer p {
+  color: white;
+  font-size: 0.7em;
+}
+
+/* line 220, style.scss */
+#footer .icon-titre:hover {
+  background: white;
+  border: 1px solid black;
+}
+
+/* line 224, style.scss */
+#footer .fab:hover {
+  color: black;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 600px) {
+  /* line 2, _responsive.scss */
+  .vignette {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+/* line 5, _responsive.scss */
+.vignette.active {
+  width: 10rem;
+  height: 10rem;
+}
+
+/* line 7, _responsive.scss */
+h3 {
+  font-size: 2.5em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  /* line 12, _responsive.scss */
+  .nav {
+    flex-direction: column;
+  }
+
+  /* line 13, _responsive.scss */
+  h3 {
+    font-size: 2em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
